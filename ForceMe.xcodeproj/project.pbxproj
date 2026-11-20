@@ -1,0 +1,1082 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000CE9E638BED33C5A0C0280 /* ForceMeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1F2C7B098C295FBE1BD7F426 /* ForceMeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		008D7BB9FB1ABA20D3C21439 /* ForceMeWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1859D294B9F9A778570D3C32 /* ForceMeWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0706CD3800873F41E522EE02 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
+		0A9C90EFF013D2D0CA4EDCC2 /* ForceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB796BFFA813A932C7A8530 /* ForceStore.swift */; };
+		0C0A23EA95360BF945D5C56C /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
+		0DEA3F9F65003B157F46B3A5 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
+		0E17D6970A0FDF6675E32DBE /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
+		101DDAEACEAF4993249BBA5E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B597CAA14EAD19E29B9585 /* Models.swift */; };
+		1A04EAA3498D7082505AE404 /* ForceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB796BFFA813A932C7A8530 /* ForceStore.swift */; };
+		1AD961090D6602D7122BA5D3 /* ForceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDE4EC4361EDF6A87DA6BC4 /* ForceActivity.swift */; };
+		1F426C3F3A1274FBDA7C74D9 /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66322A96164CAAA0DE3F047F /* NotificationCard.swift */; };
+		206C8A5959E194D73F590D8F /* ForceLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F7374D89D83A5EE5669EC /* ForceLiveActivity.swift */; };
+		20ACB6C58BA5C178406F3FEF /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
+		230206F44EEDC1519C9A947D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3211152D3987A22EEF1DB /* SettingsView.swift */; };
+		2570208CF28F8C7DC1526C13 /* IconRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2627A8F0E4177C580099CFD /* IconRenderer.swift */; };
+		2802C25075DB7AFF5E884925 /* ForceMeNotificationUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 991DABA03450DBC8AAC5A007 /* ForceMeNotificationUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		328135B4641746A8210B2D1D /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687DF75F913C563461F6AEEC /* TaskEditorView.swift */; };
+		363A90FECBC21890CF98F5F0 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584509E4788F8B3E7C32A006 /* TasksView.swift */; };
+		3C034A1395119777847BCEBC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
+		4178928810C93D719D1A0DA2 /* ForceMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE65906BC766CEAF873D20 /* ForceMeApp.swift */; };
+		425C8DB5CACC5B8A34A6350C /* force_praise.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4916238E399EAD72978BD4D /* force_praise.wav */; };
+		42BD8B124583F12D6BAA2F21 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCAEFC155E0F2B4F3FEF28 /* MenuBarView.swift */; };
+		4AF62FE2E7FB8D22091AF303 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
+		52037D12FDB586785FB18B93 /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66322A96164CAAA0DE3F047F /* NotificationCard.swift */; };
+		5C041399D48B6AC0A14FB86A /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
+		5D65A34F1B74A3F843E51DC6 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
+		66960789044E2BA62BA2FA44 /* force_alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 88B415E6D4EC48631FC8EC5E /* force_alarm.wav */; };
+		693302D6D080BA1284089CF3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B597CAA14EAD19E29B9585 /* Models.swift */; };
+		6B863996EB0FD6CBE6851822 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3211152D3987A22EEF1DB /* SettingsView.swift */; };
+		6D37C694FCBC1A7513901318 /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
+		754DA1289C19F0CE7808EA0F /* IconRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2627A8F0E4177C580099CFD /* IconRenderer.swift */; };
+		7731AEE94082D9FB2BE137B9 /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66322A96164CAAA0DE3F047F /* NotificationCard.swift */; };
+		78BB38C2DF61CA259B15AA63 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
+		7A146D5B373ACC9EA0F55215 /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
+		7A14E81600F8C8EC0048F08C /* ForceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDE4EC4361EDF6A87DA6BC4 /* ForceActivity.swift */; };
+		80999D5FD120CBE2915613F1 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F68B4E29BE0446AAF8A361 /* UserNotificationsUI.framework */; };
+		835B8FDA31EB0E3FE5DE5BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC4F5BFF6ED78F8928098EE /* Assets.xcassets */; };
+		87D5F3FC6ECD48C48FA5B331 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
+		89C11664F99FEEF87C0561D0 /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
+		8C3EEA4011DC90E19E6FC36B /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
+		8E83363D9E15923911787FDA /* IconRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2627A8F0E4177C580099CFD /* IconRenderer.swift */; };
+		8EE2BECB6D40564DBA3B3DA0 /* ForceMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB98D857DEFDF8281FB7AC /* ForceMeWatchApp.swift */; };
+		8FC73C876129F08A2825DF89 /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687DF75F913C563461F6AEEC /* TaskEditorView.swift */; };
+		91760EBEEFA7DDA646DB5957 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCAEFC155E0F2B4F3FEF28 /* MenuBarView.swift */; };
+		9642E81761F4E55E3131BE2D /* IconRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2627A8F0E4177C580099CFD /* IconRenderer.swift */; };
+		9B0F9DB633B6BDB925377A51 /* force_praise.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4916238E399EAD72978BD4D /* force_praise.wav */; };
+		9D0F17D119D144019A69CB48 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
+		9F508BA398E3EBA0F7684127 /* RepeatingTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851E2A26C8DAC720CD5CE2B /* RepeatingTaskRow.swift */; };
+		A212E9A5EAF9BF0D13649D82 /* ScheduleEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5A67B1B8FE75FF503989D /* ScheduleEngineTests.swift */; };
+		A5049DB55F2AB68C3BC9DCB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC4F5BFF6ED78F8928098EE /* Assets.xcassets */; };
+		ACB0CBC9DE6F0DFD92928E05 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */; };
+		AD1076BE4FD26D35728D41F3 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
+		AFB6129348874D47E101155E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD96CE73D50D39DF03F15B3 /* UserNotifications.framework */; };
+		B7FE89B152107145D1F416AD /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804057413CAE7E9C96D3C64 /* DemoData.swift */; };
+		BA3D1042CCDD48807C181A29 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D0941D6E31B74633B06E7F /* Info.plist */; };
+		BAB85DCD8C06C068175A5E24 /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
+		BF1D9B74D7CFDAB2356E9EFA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B597CAA14EAD19E29B9585 /* Models.swift */; };
+		C2B201FDB5B3766DB8435B8D /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F203D563B7AF4BD17FC524 /* TodayView.swift */; };
+		C8B1AAB1A7503AAC98E19E00 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F203D563B7AF4BD17FC524 /* TodayView.swift */; };
+		C91682568DE02D6E683A7763 /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
+		C9A29AE3026712013F3DE732 /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66322A96164CAAA0DE3F047F /* NotificationCard.swift */; };
+		CD089BC7E2DE0F633434B829 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA10FB8BE8ABE933BF563C /* NotificationViewController.swift */; };
+		D3B94054D2E007FDAC5AD668 /* ForceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB796BFFA813A932C7A8530 /* ForceStore.swift */; };
+		D3C12FF41A354DFE73D66173 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
+		D3C90566EA6CC6ADBFD22D5F /* ForceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB796BFFA813A932C7A8530 /* ForceStore.swift */; };
+		D65847B18172DBE08E2E832C /* ForceMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE65906BC766CEAF873D20 /* ForceMeApp.swift */; };
+		D70E87CA7E73BBBD85C7D706 /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66322A96164CAAA0DE3F047F /* NotificationCard.swift */; };
+		E175981FD7301F08BFFD30BE /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */; };
+		E244EDB72618B586A3D49279 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B597CAA14EAD19E29B9585 /* Models.swift */; };
+		E4E4B66F622238AAE3787F2F /* force_alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 88B415E6D4EC48631FC8EC5E /* force_alarm.wav */; };
+		E5E771DF061B52D4B569F7E0 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804057413CAE7E9C96D3C64 /* DemoData.swift */; };
+		ECFE222DAB4C9450C36B71A8 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584509E4788F8B3E7C32A006 /* TasksView.swift */; };
+		EF1A67D344E24CF3F03DB86C /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */; };
+		F45FFB3B149A56529004222F /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
+		F5A39C5C235F4948B87D1A04 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */; };
+		FBB39A1C340E69502863FF2D /* RepeatingTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851E2A26C8DAC720CD5CE2B /* RepeatingTaskRow.swift */; };
+		FCA9E94A3B528AF44E6BA755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC4F5BFF6ED78F8928098EE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24D57F6DB273B94505C21705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EC3A4F76616B99509E51228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ADBB5A9DDE11B517DEA8C75;
+			remoteInfo = ForceMeWatch;
+		};
+		33752C4EE88D5C68BEB5936C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EC3A4F76616B99509E51228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8EF02D4F59B13ADE9A45F7D;
+			remoteInfo = ForceMeNotificationUI;
+		};
+		77806CEBA4F261743529108C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EC3A4F76616B99509E51228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CC292654D9B5A28DF9EDBC6;
+			remoteInfo = ForceMeWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		86279AC2ADE1130947408A07 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				008D7BB9FB1ABA20D3C21439 /* ForceMeWidgets.appex in Embed Foundation Extensions */,
+				2802C25075DB7AFF5E884925 /* ForceMeNotificationUI.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C408F4993DDEE08E5726DAE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				000CE9E638BED33C5A0C0280 /* ForceMeWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0EE4475A46E0550A7CB1A3CB /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		1859D294B9F9A778570D3C32 /* ForceMeWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ForceMeWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AF323A215CA31CE22244AEB /* ForceMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForceMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2C7B098C295FBE1BD7F426 /* ForceMeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForceMeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDE4EC4361EDF6A87DA6BC4 /* ForceActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceActivity.swift; sourceTree = "<group>"; };
+		2DD5725994981F73C8334C6B /* ForceMeWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForceMeWidgets.entitlements; sourceTree = "<group>"; };
+		32EF8F821E47999F7C0FEF8C /* ForceMeMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForceMeMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		53FE65906BC766CEAF873D20 /* ForceMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceMeApp.swift; sourceTree = "<group>"; };
+		55BA10FB8BE8ABE933BF563C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		584509E4788F8B3E7C32A006 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		61EB98D857DEFDF8281FB7AC /* ForceMeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceMeWatchApp.swift; sourceTree = "<group>"; };
+		66322A96164CAAA0DE3F047F /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
+		687DF75F913C563461F6AEEC /* TaskEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
+		6D131427BAA0067E95D7F663 /* ForceMe.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ForceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDCAEFC155E0F2B4F3FEF28 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		786F7374D89D83A5EE5669EC /* ForceLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceLiveActivity.swift; sourceTree = "<group>"; };
+		7EA6205F791905E6C78A0DA2 /* ForceMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForceMe.entitlements; sourceTree = "<group>"; };
+		7EC4F5BFF6ED78F8928098EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88B415E6D4EC48631FC8EC5E /* force_alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = force_alarm.wav; sourceTree = "<group>"; };
+		991DABA03450DBC8AAC5A007 /* ForceMeNotificationUI.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = ForceMeNotificationUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB796BFFA813A932C7A8530 /* ForceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceStore.swift; sourceTree = "<group>"; };
+		A1F5A67B1B8FE75FF503989D /* ScheduleEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleEngineTests.swift; sourceTree = "<group>"; };
+		A36EE6267976EBF00ACA4983 /* TaskIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskIconView.swift; sourceTree = "<group>"; };
+		A3B3211152D3987A22EEF1DB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A6F68B4E29BE0446AAF8A361 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		A90163A8DB55E69310BC2AF6 /* ForceMeWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForceMeWatch.entitlements; sourceTree = "<group>"; };
+		AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleEngine.swift; sourceTree = "<group>"; };
+		B6D6C1D647BECD0B9AA3EE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BB9251C4DA6C3DF6D60283B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C4B597CAA14EAD19E29B9585 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C7F203D563B7AF4BD17FC524 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		C804057413CAE7E9C96D3C64 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		CAD96CE73D50D39DF03F15B3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D2627A8F0E4177C580099CFD /* IconRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRenderer.swift; sourceTree = "<group>"; };
+		D3D0941D6E31B74633B06E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EA7A24612D5C9BD3AFA5CAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		F4916238E399EAD72978BD4D /* force_praise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = force_praise.wav; sourceTree = "<group>"; };
+		F851E2A26C8DAC720CD5CE2B /* RepeatingTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingTaskRow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B0FA52F208896766E820D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80999D5FD120CBE2915613F1 /* UserNotificationsUI.framework in Frameworks */,
+				AFB6129348874D47E101155E /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1201581FBE71CBA0BDF43E4F = {
+			isa = PBXGroup;
+			children = (
+				AA65DFC875CC85B636C66E22 /* Assets */,
+				D90A5B5FD0CF29A09105BA7B /* ForceMe */,
+				7A429A0C8096C387A220C4F4 /* ForceMeNotificationUI */,
+				8CDF52C200537C29C62E5F1F /* ForceMeWatch */,
+				F50B9FF04885CBD68A4D3EEE /* ForceMeWidgets */,
+				6ECA532B7B033F9B27D4B46E /* Resources */,
+				F288A697C19DBE3102D1DC8D /* Shared */,
+				F72DC9FA1830FD8852897887 /* Tests */,
+				F356FEA56B7FADBD20347C8C /* Frameworks */,
+				EF1587AED5BFB4CFB39BD07C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B1CAC32763D3676C38DC850 /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				2CDE4EC4361EDF6A87DA6BC4 /* ForceActivity.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
+		5910E7B816DA239B44239824 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				66322A96164CAAA0DE3F047F /* NotificationCard.swift */,
+				A36EE6267976EBF00ACA4983 /* TaskIconView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6ECA532B7B033F9B27D4B46E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88B415E6D4EC48631FC8EC5E /* force_alarm.wav */,
+				F4916238E399EAD72978BD4D /* force_praise.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A429A0C8096C387A220C4F4 /* ForceMeNotificationUI */ = {
+			isa = PBXGroup;
+			children = (
+				BB9251C4DA6C3DF6D60283B9 /* Info.plist */,
+				55BA10FB8BE8ABE933BF563C /* NotificationViewController.swift */,
+			);
+			path = ForceMeNotificationUI;
+			sourceTree = "<group>";
+		};
+		7BC88B2FF4D541FDD176B1AD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9CB796BFFA813A932C7A8530 /* ForceStore.swift */,
+				C4B597CAA14EAD19E29B9585 /* Models.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8CDF52C200537C29C62E5F1F /* ForceMeWatch */ = {
+			isa = PBXGroup;
+			children = (
+				A90163A8DB55E69310BC2AF6 /* ForceMeWatch.entitlements */,
+				61EB98D857DEFDF8281FB7AC /* ForceMeWatchApp.swift */,
+				EA7A24612D5C9BD3AFA5CAD2 /* Info.plist */,
+			);
+			path = ForceMeWatch;
+			sourceTree = "<group>";
+		};
+		AA65DFC875CC85B636C66E22 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7EC4F5BFF6ED78F8928098EE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D90A5B5FD0CF29A09105BA7B /* ForceMe */ = {
+			isa = PBXGroup;
+			children = (
+				C804057413CAE7E9C96D3C64 /* DemoData.swift */,
+				7EA6205F791905E6C78A0DA2 /* ForceMe.entitlements */,
+				53FE65906BC766CEAF873D20 /* ForceMeApp.swift */,
+				D3D0941D6E31B74633B06E7F /* Info.plist */,
+				6EDCAEFC155E0F2B4F3FEF28 /* MenuBarView.swift */,
+				F851E2A26C8DAC720CD5CE2B /* RepeatingTaskRow.swift */,
+				A3B3211152D3987A22EEF1DB /* SettingsView.swift */,
+				687DF75F913C563461F6AEEC /* TaskEditorView.swift */,
+				584509E4788F8B3E7C32A006 /* TasksView.swift */,
+				C7F203D563B7AF4BD17FC524 /* TodayView.swift */,
+			);
+			path = ForceMe;
+			sourceTree = "<group>";
+		};
+		DB6A6AC7B4FD89FDD67DB261 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D2627A8F0E4177C580099CFD /* IconRenderer.swift */,
+				F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		EF1587AED5BFB4CFB39BD07C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D131427BAA0067E95D7F663 /* ForceMe.app */,
+				32EF8F821E47999F7C0FEF8C /* ForceMeMac.app */,
+				991DABA03450DBC8AAC5A007 /* ForceMeNotificationUI.appex */,
+				1AF323A215CA31CE22244AEB /* ForceMeTests.xctest */,
+				1F2C7B098C295FBE1BD7F426 /* ForceMeWatch.app */,
+				1859D294B9F9A778570D3C32 /* ForceMeWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F288A697C19DBE3102D1DC8D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F3B8ED3829D0E4895EDCEDB4 /* Core */,
+				7BC88B2FF4D541FDD176B1AD /* Data */,
+				1B1CAC32763D3676C38DC850 /* LiveActivity */,
+				DB6A6AC7B4FD89FDD67DB261 /* Notifications */,
+				5910E7B816DA239B44239824 /* UI */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F356FEA56B7FADBD20347C8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD96CE73D50D39DF03F15B3 /* UserNotifications.framework */,
+				A6F68B4E29BE0446AAF8A361 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3B8ED3829D0E4895EDCEDB4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0EE4475A46E0550A7CB1A3CB /* Messages.swift */,
+				AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */,
+				40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F50B9FF04885CBD68A4D3EEE /* ForceMeWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				786F7374D89D83A5EE5669EC /* ForceLiveActivity.swift */,
+				2DD5725994981F73C8334C6B /* ForceMeWidgets.entitlements */,
+				B6D6C1D647BECD0B9AA3EE01 /* Info.plist */,
+			);
+			path = ForceMeWidgets;
+			sourceTree = "<group>";
+		};
+		F72DC9FA1830FD8852897887 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A1F5A67B1B8FE75FF503989D /* ScheduleEngineTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5427399EB83691A5CB32D86F /* ForceMeMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FE8421D818491E373251F8 /* Build configuration list for PBXNativeTarget "ForceMeMac" */;
+			buildPhases = (
+				8ADC6957F571B7BEFC6F473C /* Sources */,
+				CF5176A825003D3D646C8887 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForceMeMac;
+			packageProductDependencies = (
+			);
+			productName = ForceMeMac;
+			productReference = 32EF8F821E47999F7C0FEF8C /* ForceMeMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5ADBB5A9DDE11B517DEA8C75 /* ForceMeWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C53E8BFAE27037190B9EF4B /* Build configuration list for PBXNativeTarget "ForceMeWatch" */;
+			buildPhases = (
+				97BC12E06365C8EA806A4ACA /* Sources */,
+				81649525857017421239CFE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForceMeWatch;
+			packageProductDependencies = (
+			);
+			productName = ForceMeWatch;
+			productReference = 1F2C7B098C295FBE1BD7F426 /* ForceMeWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CC292654D9B5A28DF9EDBC6 /* ForceMeWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E7D1F6E98000BDFF9D11A8F /* Build configuration list for PBXNativeTarget "ForceMeWidgets" */;
+			buildPhases = (
+				0338553070229FC16E25FAB6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForceMeWidgets;
+			packageProductDependencies = (
+			);
+			productName = ForceMeWidgets;
+			productReference = 1859D294B9F9A778570D3C32 /* ForceMeWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		AE9F89F2D1F060F7D33EA80F /* ForceMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80CC47807EF232F726A9459 /* Build configuration list for PBXNativeTarget "ForceMe" */;
+			buildPhases = (
+				AC694DE5E445948274D822C8 /* Sources */,
+				150CFF152A953016B46FE938 /* Resources */,
+				86279AC2ADE1130947408A07 /* Embed Foundation Extensions */,
+				9C408F4993DDEE08E5726DAE /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2047C0DA54B273328BE66C78 /* PBXTargetDependency */,
+				46D3C5D3EA23A95901AD043C /* PBXTargetDependency */,
+				16AF071B09B95FEB2C649162 /* PBXTargetDependency */,
+			);
+			name = ForceMe;
+			packageProductDependencies = (
+			);
+			productName = ForceMe;
+			productReference = 6D131427BAA0067E95D7F663 /* ForceMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F35B5CE2F7B54E06D0A742D5 /* ForceMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01BB5C646A090FFDBB411797 /* Build configuration list for PBXNativeTarget "ForceMeTests" */;
+			buildPhases = (
+				6D909542C205A0A76DE4DF83 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForceMeTests;
+			packageProductDependencies = (
+			);
+			productName = ForceMeTests;
+			productReference = 1AF323A215CA31CE22244AEB /* ForceMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8EF02D4F59B13ADE9A45F7D /* ForceMeNotificationUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7871A67551061E1A061AB44 /* Build configuration list for PBXNativeTarget "ForceMeNotificationUI" */;
+			buildPhases = (
+				82A301779B44DF599A79E2B9 /* Sources */,
+				1B0FA52F208896766E820D58 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForceMeNotificationUI;
+			packageProductDependencies = (
+			);
+			productName = ForceMeNotificationUI;
+			productReference = 991DABA03450DBC8AAC5A007 /* ForceMeNotificationUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EC3A4F76616B99509E51228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5427399EB83691A5CB32D86F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					5ADBB5A9DDE11B517DEA8C75 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					8CC292654D9B5A28DF9EDBC6 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					AE9F89F2D1F060F7D33EA80F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					F35B5CE2F7B54E06D0A742D5 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					F8EF02D4F59B13ADE9A45F7D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4B1C431E1BC14F95642DD446 /* Build configuration list for PBXProject "ForceMe" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 1201581FBE71CBA0BDF43E4F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EF1587AED5BFB4CFB39BD07C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE9F89F2D1F060F7D33EA80F /* ForceMe */,
+				8CC292654D9B5A28DF9EDBC6 /* ForceMeWidgets */,
+				F8EF02D4F59B13ADE9A45F7D /* ForceMeNotificationUI */,
+				5ADBB5A9DDE11B517DEA8C75 /* ForceMeWatch */,
+				5427399EB83691A5CB32D86F /* ForceMeMac */,
+				F35B5CE2F7B54E06D0A742D5 /* ForceMeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		150CFF152A953016B46FE938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA9E94A3B528AF44E6BA755 /* Assets.xcassets in Resources */,
+				66960789044E2BA62BA2FA44 /* force_alarm.wav in Resources */,
+				425C8DB5CACC5B8A34A6350C /* force_praise.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81649525857017421239CFE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5049DB55F2AB68C3BC9DCB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5176A825003D3D646C8887 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835B8FDA31EB0E3FE5DE5BA5 /* Assets.xcassets in Resources */,
+				BA3D1042CCDD48807C181A29 /* Info.plist in Resources */,
+				E4E4B66F622238AAE3787F2F /* force_alarm.wav in Resources */,
+				9B0F9DB633B6BDB925377A51 /* force_praise.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0338553070229FC16E25FAB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A14E81600F8C8EC0048F08C /* ForceActivity.swift in Sources */,
+				206C8A5959E194D73F590D8F /* ForceLiveActivity.swift in Sources */,
+				D3B94054D2E007FDAC5AD668 /* ForceStore.swift in Sources */,
+				2570208CF28F8C7DC1526C13 /* IconRenderer.swift in Sources */,
+				0706CD3800873F41E522EE02 /* Messages.swift in Sources */,
+				E244EDB72618B586A3D49279 /* Models.swift in Sources */,
+				7731AEE94082D9FB2BE137B9 /* NotificationCard.swift in Sources */,
+				F5A39C5C235F4948B87D1A04 /* NotificationScheduler.swift in Sources */,
+				89C11664F99FEEF87C0561D0 /* ScheduleEngine.swift in Sources */,
+				7A146D5B373ACC9EA0F55215 /* TaskIconView.swift in Sources */,
+				9D0F17D119D144019A69CB48 /* TaskModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D909542C205A0A76DE4DF83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DEA3F9F65003B157F46B3A5 /* Messages.swift in Sources */,
+				0C0A23EA95360BF945D5C56C /* ScheduleEngine.swift in Sources */,
+				A212E9A5EAF9BF0D13649D82 /* ScheduleEngineTests.swift in Sources */,
+				78BB38C2DF61CA259B15AA63 /* TaskModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82A301779B44DF599A79E2B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52037D12FDB586785FB18B93 /* NotificationCard.swift in Sources */,
+				CD089BC7E2DE0F633434B829 /* NotificationViewController.swift in Sources */,
+				8C3EEA4011DC90E19E6FC36B /* TaskIconView.swift in Sources */,
+				3C034A1395119777847BCEBC /* TaskModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ADC6957F571B7BEFC6F473C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7FE89B152107145D1F416AD /* DemoData.swift in Sources */,
+				4178928810C93D719D1A0DA2 /* ForceMeApp.swift in Sources */,
+				D3C90566EA6CC6ADBFD22D5F /* ForceStore.swift in Sources */,
+				9642E81761F4E55E3131BE2D /* IconRenderer.swift in Sources */,
+				91760EBEEFA7DDA646DB5957 /* MenuBarView.swift in Sources */,
+				4AF62FE2E7FB8D22091AF303 /* Messages.swift in Sources */,
+				BF1D9B74D7CFDAB2356E9EFA /* Models.swift in Sources */,
+				D70E87CA7E73BBBD85C7D706 /* NotificationCard.swift in Sources */,
+				EF1A67D344E24CF3F03DB86C /* NotificationScheduler.swift in Sources */,
+				FBB39A1C340E69502863FF2D /* RepeatingTaskRow.swift in Sources */,
+				0E17D6970A0FDF6675E32DBE /* ScheduleEngine.swift in Sources */,
+				6B863996EB0FD6CBE6851822 /* SettingsView.swift in Sources */,
+				8FC73C876129F08A2825DF89 /* TaskEditorView.swift in Sources */,
+				20ACB6C58BA5C178406F3FEF /* TaskIconView.swift in Sources */,
+				AD1076BE4FD26D35728D41F3 /* TaskModel.swift in Sources */,
+				363A90FECBC21890CF98F5F0 /* TasksView.swift in Sources */,
+				C2B201FDB5B3766DB8435B8D /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97BC12E06365C8EA806A4ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EE2BECB6D40564DBA3B3DA0 /* ForceMeWatchApp.swift in Sources */,
+				1A04EAA3498D7082505AE404 /* ForceStore.swift in Sources */,
+				754DA1289C19F0CE7808EA0F /* IconRenderer.swift in Sources */,
+				87D5F3FC6ECD48C48FA5B331 /* Messages.swift in Sources */,
+				693302D6D080BA1284089CF3 /* Models.swift in Sources */,
+				C9A29AE3026712013F3DE732 /* NotificationCard.swift in Sources */,
+				E175981FD7301F08BFFD30BE /* NotificationScheduler.swift in Sources */,
+				C91682568DE02D6E683A7763 /* ScheduleEngine.swift in Sources */,
+				F45FFB3B149A56529004222F /* TaskIconView.swift in Sources */,
+				5C041399D48B6AC0A14FB86A /* TaskModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC694DE5E445948274D822C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E771DF061B52D4B569F7E0 /* DemoData.swift in Sources */,
+				1AD961090D6602D7122BA5D3 /* ForceActivity.swift in Sources */,
+				D65847B18172DBE08E2E832C /* ForceMeApp.swift in Sources */,
+				0A9C90EFF013D2D0CA4EDCC2 /* ForceStore.swift in Sources */,
+				8E83363D9E15923911787FDA /* IconRenderer.swift in Sources */,
+				42BD8B124583F12D6BAA2F21 /* MenuBarView.swift in Sources */,
+				5D65A34F1B74A3F843E51DC6 /* Messages.swift in Sources */,
+				101DDAEACEAF4993249BBA5E /* Models.swift in Sources */,
+				1F426C3F3A1274FBDA7C74D9 /* NotificationCard.swift in Sources */,
+				ACB0CBC9DE6F0DFD92928E05 /* NotificationScheduler.swift in Sources */,
+				9F508BA398E3EBA0F7684127 /* RepeatingTaskRow.swift in Sources */,
+				6D37C694FCBC1A7513901318 /* ScheduleEngine.swift in Sources */,
+				230206F44EEDC1519C9A947D /* SettingsView.swift in Sources */,
+				328135B4641746A8210B2D1D /* TaskEditorView.swift in Sources */,
+				BAB85DCD8C06C068175A5E24 /* TaskIconView.swift in Sources */,
+				D3C12FF41A354DFE73D66173 /* TaskModel.swift in Sources */,
+				ECFE222DAB4C9450C36B71A8 /* TasksView.swift in Sources */,
+				C8B1AAB1A7503AAC98E19E00 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16AF071B09B95FEB2C649162 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ADBB5A9DDE11B517DEA8C75 /* ForceMeWatch */;
+			targetProxy = 24D57F6DB273B94505C21705 /* PBXContainerItemProxy */;
+		};
+		2047C0DA54B273328BE66C78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CC292654D9B5A28DF9EDBC6 /* ForceMeWidgets */;
+			targetProxy = 77806CEBA4F261743529108C /* PBXContainerItemProxy */;
+		};
+		46D3C5D3EA23A95901AD043C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8EF02D4F59B13ADE9A45F7D /* ForceMeNotificationUI */;
+			targetProxy = 33752C4EE88D5C68BEB5936C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18E921A2E9269D590D8EEE31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		2CD0A69AED37A8042CD75FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForceMeWidgets/ForceMeWidgets.entitlements;
+				INFOPLIST_FILE = ForceMeWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		42915B9396ADC22FFFA59C38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForceMe/ForceMe.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ForceMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A0FFA5C860D6BCDA40FB95C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForceMeMac/ForceMeMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ForceMeMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme;
+				PRODUCT_NAME = ForceMe;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		574022CE646B0B486B112337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ForceMeNotificationUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.notificationui;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FF9A2B94344934A9CA20DF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		600FFC4BCD5D3F576978865F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		62EB28F9A7ADE465B3C80C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForceMe/ForceMe.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ForceMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		703EAF37FAD1862CEF3BD17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		BB325B4EAF06DB52A0C4F8D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForceMeWatch/ForceMeWatch.entitlements;
+				INFOPLIST_FILE = ForceMeWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		BE75D5E72421A448C35F3604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForceMeWidgets/ForceMeWidgets.entitlements;
+				INFOPLIST_FILE = ForceMeWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3500002601EDDF21506FF68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForceMeWatch/ForceMeWatch.entitlements;
+				INFOPLIST_FILE = ForceMeWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		DC2999754907FFB939F95C9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ForceMeNotificationUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme.notificationui;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF680859A2EB024B1E9B3CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForceMeMac/ForceMeMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ForceMeMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mrbigbear.forceme;
+				PRODUCT_NAME = ForceMe;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01BB5C646A090FFDBB411797 /* Build configuration list for PBXNativeTarget "ForceMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600FFC4BCD5D3F576978865F /* Debug */,
+				5FF9A2B94344934A9CA20DF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		02FE8421D818491E373251F8 /* Build configuration list for PBXNativeTarget "ForceMeMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF680859A2EB024B1E9B3CF1 /* Debug */,
+				4A0FFA5C860D6BCDA40FB95C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4B1C431E1BC14F95642DD446 /* Build configuration list for PBXProject "ForceMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E921A2E9269D590D8EEE31 /* Debug */,
+				703EAF37FAD1862CEF3BD17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E7D1F6E98000BDFF9D11A8F /* Build configuration list for PBXNativeTarget "ForceMeWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE75D5E72421A448C35F3604 /* Debug */,
+				2CD0A69AED37A8042CD75FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9C53E8BFAE27037190B9EF4B /* Build configuration list for PBXNativeTarget "ForceMeWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3500002601EDDF21506FF68 /* Debug */,
+				BB325B4EAF06DB52A0C4F8D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A7871A67551061E1A061AB44 /* Build configuration list for PBXNativeTarget "ForceMeNotificationUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				574022CE646B0B486B112337 /* Debug */,
+				DC2999754907FFB939F95C9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A80CC47807EF232F726A9459 /* Build configuration list for PBXNativeTarget "ForceMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62EB28F9A7ADE465B3C80C75 /* Debug */,
+				42915B9396ADC22FFFA59C38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EC3A4F76616B99509E51228 /* Project object */;
+}

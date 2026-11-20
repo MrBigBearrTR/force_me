@@ -1,0 +1,211 @@
+name: ForceMe
+options:
+  bundleIdPrefix: com.mrbigbear
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "18.0"
+    macOS: "15.0"
+    watchOS: "11.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    # Kendi Apple Developer Team ID'ni buraya yaz (Xcode > Signing & Capabilities).
+    DEVELOPMENT_TEAM: ""
+    ENABLE_PREVIEWS: YES
+
+targets:
+  ForceMe:
+    type: application
+    platform: iOS
+    sources:
+      - ForceMe
+      - Shared
+      - Resources
+      - Assets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrbigbear.forceme
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: ForceMe/Info.plist
+      properties:
+        CFBundleDisplayName: ForceMe
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+        NSSupportsLiveActivities: true
+        UIBackgroundModes: [fetch, remote-notification]
+        BGTaskSchedulerPermittedIdentifiers: [com.mrbigbear.forceme.refresh]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    entitlements:
+      path: ForceMe/ForceMe.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.mrbigbear.forceme]
+        com.apple.developer.icloud-container-identifiers: [iCloud.com.mrbigbear.forceme]
+        com.apple.developer.icloud-services: [CloudKit]
+        aps-environment: development
+        com.apple.developer.usernotifications.time-sensitive: true
+    dependencies:
+      - target: ForceMeWidgets
+      - target: ForceMeNotificationUI
+      - target: ForceMeWatch
+
+  ForceMeWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - ForceMeWidgets
+      - Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrbigbear.forceme.widgets
+        TARGETED_DEVICE_FAMILY: "1,2"
+    info:
+      path: ForceMeWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: ForceMe
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: ForceMeWidgets/ForceMeWidgets.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.mrbigbear.forceme]
+        com.apple.developer.icloud-container-identifiers: [iCloud.com.mrbigbear.forceme]
+        com.apple.developer.icloud-services: [CloudKit]
+
+  ForceMeNotificationUI:
+    type: app-extension
+    platform: iOS
+    sources:
+      - ForceMeNotificationUI
+      - Shared/UI
+      - Shared/Core/TaskModel.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrbigbear.forceme.notificationui
+        TARGETED_DEVICE_FAMILY: "1,2"
+    dependencies:
+      # Swift otomatik bağlamıyor; olmadan sistem uzantıyı başlatamıyor (NSExtensionContextClass bulunamıyor).
+      - sdk: UserNotificationsUI.framework
+      - sdk: UserNotifications.framework
+    info:
+      path: ForceMeNotificationUI/Info.plist
+      properties:
+        CFBundleDisplayName: ForceMe
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.usernotifications.content-extension
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NotificationViewController
+          NSExtensionAttributes:
+            UNNotificationExtensionCategory:
+              - FORCE_REMINDER
+              - FORCE_DEADLINE
+              - FORCE_INTERVAL
+              - FORCE_PRAISE
+            UNNotificationExtensionInitialContentSizeRatio: 0.3
+            UNNotificationExtensionDefaultContentHidden: true
+
+  ForceMeWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - ForceMeWatch
+      - path: Shared
+        excludes: [LiveActivity]
+      - Assets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrbigbear.forceme.watchkitapp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: ForceMeWatch/Info.plist
+      properties:
+        CFBundleDisplayName: ForceMe
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.mrbigbear.forceme
+    entitlements:
+      path: ForceMeWatch/ForceMeWatch.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.mrbigbear.forceme]
+        com.apple.developer.icloud-container-identifiers: [iCloud.com.mrbigbear.forceme]
+        com.apple.developer.icloud-services: [CloudKit]
+        aps-environment: development
+
+  ForceMeMac:
+    type: application
+    platform: macOS
+    sources:
+      - ForceMe
+      - path: Shared
+        excludes: [LiveActivity]
+      - Resources
+      - Assets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrbigbear.forceme
+        PRODUCT_NAME: ForceMe
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: ForceMeMac/Info.plist
+      properties:
+        CFBundleDisplayName: ForceMe
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.productivity
+    entitlements:
+      path: ForceMeMac/ForceMeMac.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.application-groups: [group.com.mrbigbear.forceme]
+        com.apple.developer.icloud-container-identifiers: [iCloud.com.mrbigbear.forceme]
+        com.apple.developer.icloud-services: [CloudKit]
+        com.apple.developer.aps-environment: development
+
+  ForceMeTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests
+      - Shared/Core
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrbigbear.forceme.tests
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  ForceMe:
+    build:
+      targets:
+        ForceMe: all
+    run:
+      config: Debug
+  ForceMeMac:
+    build:
+      targets:
+        ForceMeMac: all
+    run:
+      config: Debug
+    test:
+      targets: [ForceMeTests]
+  ForceMeWatch:
+    build:
+      targets:
+        ForceMeWatch: all
