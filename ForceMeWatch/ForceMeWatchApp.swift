@@ -6,6 +6,9 @@ struct ForceMeWatchApp: App {
     var body: some Scene {
         WindowGroup {
             WatchTodayView()
+                #if DEBUG
+                .task { DemoData.seedIfRequested() }
+                #endif
         }
         .modelContainer(ForceStore.shared.container)
     }
