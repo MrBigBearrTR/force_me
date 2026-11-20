@@ -45,6 +45,14 @@ struct TasksView: View {
             }
             .sheet(isPresented: $creating) { TaskEditorView(task: nil) }
             .sheet(item: $editing) { TaskEditorView(task: $0) }
+            #if DEBUG
+            .task {
+                // DEBUG: `-editRepeating` ile gün içi tekrar eden ilk görevin düzenleyicisi açılır (ekran görüntüsü için).
+                if ProcessInfo.processInfo.arguments.contains("-editRepeating") {
+                    editing = tasks.first { $0.repeatEveryMinutes > 0 }
+                }
+            }
+            #endif
         }
     }
 

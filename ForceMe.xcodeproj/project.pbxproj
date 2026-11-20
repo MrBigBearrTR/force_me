@@ -12,6 +12,7 @@
 		0706CD3800873F41E522EE02 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
 		0A9C90EFF013D2D0CA4EDCC2 /* ForceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB796BFFA813A932C7A8530 /* ForceStore.swift */; };
 		0C0A23EA95360BF945D5C56C /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
+		0D15A2E86E0A7367DFE3948E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */; };
 		0DEA3F9F65003B157F46B3A5 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
 		0E17D6970A0FDF6675E32DBE /* ScheduleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE909EBAFAA7ACEBDCC93A /* ScheduleEngine.swift */; };
 		101DDAEACEAF4993249BBA5E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B597CAA14EAD19E29B9585 /* Models.swift */; };
@@ -27,6 +28,7 @@
 		363A90FECBC21890CF98F5F0 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584509E4788F8B3E7C32A006 /* TasksView.swift */; };
 		3C034A1395119777847BCEBC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
 		4178928810C93D719D1A0DA2 /* ForceMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE65906BC766CEAF873D20 /* ForceMeApp.swift */; };
+		417C3DB53B39CCB378C33F88 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */; };
 		425C8DB5CACC5B8A34A6350C /* force_praise.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4916238E399EAD72978BD4D /* force_praise.wav */; };
 		42BD8B124583F12D6BAA2F21 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCAEFC155E0F2B4F3FEF28 /* MenuBarView.swift */; };
 		4AF62FE2E7FB8D22091AF303 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4475A46E0550A7CB1A3CB /* Messages.swift */; };
@@ -55,11 +57,14 @@
 		9B0F9DB633B6BDB925377A51 /* force_praise.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4916238E399EAD72978BD4D /* force_praise.wav */; };
 		9D0F17D119D144019A69CB48 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
 		9F508BA398E3EBA0F7684127 /* RepeatingTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851E2A26C8DAC720CD5CE2B /* RepeatingTaskRow.swift */; };
+		A045D9FC783369D70A3D30AB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */; };
 		A212E9A5EAF9BF0D13649D82 /* ScheduleEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5A67B1B8FE75FF503989D /* ScheduleEngineTests.swift */; };
 		A5049DB55F2AB68C3BC9DCB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC4F5BFF6ED78F8928098EE /* Assets.xcassets */; };
+		A60BE93023B1430C7641736C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */; };
 		ACB0CBC9DE6F0DFD92928E05 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */; };
 		AD1076BE4FD26D35728D41F3 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1AE2DBC8DF2F315F0E776 /* TaskModel.swift */; };
 		AFB6129348874D47E101155E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD96CE73D50D39DF03F15B3 /* UserNotifications.framework */; };
+		B61F649BAE67698CA024C257 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */; };
 		B7FE89B152107145D1F416AD /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804057413CAE7E9C96D3C64 /* DemoData.swift */; };
 		BA3D1042CCDD48807C181A29 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D0941D6E31B74633B06E7F /* Info.plist */; };
 		BAB85DCD8C06C068175A5E24 /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
@@ -173,6 +178,7 @@
 		CAD96CE73D50D39DF03F15B3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		D2627A8F0E4177C580099CFD /* IconRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRenderer.swift; sourceTree = "<group>"; };
 		D3D0941D6E31B74633B06E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		EA7A24612D5C9BD3AFA5CAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F0AF24832885EBC6DBD86979 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		F4916238E399EAD72978BD4D /* force_praise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = force_praise.wav; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 		F288A697C19DBE3102D1DC8D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */,
 				F3B8ED3829D0E4895EDCEDB4 /* Core */,
 				7BC88B2FF4D541FDD176B1AD /* Data */,
 				1B1CAC32763D3676C38DC850 /* LiveActivity */,
@@ -402,6 +409,7 @@
 			buildConfigurationList = 7E7D1F6E98000BDFF9D11A8F /* Build configuration list for PBXNativeTarget "ForceMeWidgets" */;
 			buildPhases = (
 				0338553070229FC16E25FAB6 /* Sources */,
+				A5F3D9B0C0461D7FC0889C94 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -459,6 +467,7 @@
 			buildConfigurationList = A7871A67551061E1A061AB44 /* Build configuration list for PBXNativeTarget "ForceMeNotificationUI" */;
 			buildPhases = (
 				82A301779B44DF599A79E2B9 /* Sources */,
+				E6B56BDD80BC2FFDEBEF3EDE /* Resources */,
 				1B0FA52F208896766E820D58 /* Frameworks */,
 			);
 			buildRules = (
@@ -537,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA9E94A3B528AF44E6BA755 /* Assets.xcassets in Resources */,
+				0D15A2E86E0A7367DFE3948E /* PrivacyInfo.xcprivacy in Resources */,
 				66960789044E2BA62BA2FA44 /* force_alarm.wav in Resources */,
 				425C8DB5CACC5B8A34A6350C /* force_praise.wav in Resources */,
 			);
@@ -547,6 +557,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5049DB55F2AB68C3BC9DCB5 /* Assets.xcassets in Resources */,
+				417C3DB53B39CCB378C33F88 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F3D9B0C0461D7FC0889C94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60BE93023B1430C7641736C /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,8 +575,17 @@
 			files = (
 				835B8FDA31EB0E3FE5DE5BA5 /* Assets.xcassets in Resources */,
 				BA3D1042CCDD48807C181A29 /* Info.plist in Resources */,
+				B61F649BAE67698CA024C257 /* PrivacyInfo.xcprivacy in Resources */,
 				E4E4B66F622238AAE3787F2F /* force_alarm.wav in Resources */,
 				9B0F9DB633B6BDB925377A51 /* force_praise.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6B56BDD80BC2FFDEBEF3EDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A045D9FC783369D70A3D30AB /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

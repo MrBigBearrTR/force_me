@@ -76,17 +76,28 @@ struct ForceMeApp: App {
 }
 
 struct RootView: View {
+    @State private var tab = RootView.initialTab
+
     var body: some View {
-        TabView {
-            Tab("Bugün", systemImage: "flame.fill") { TodayView() }
-            Tab("Görevler", systemImage: "list.bullet") { TasksView() }
+        TabView(selection: $tab) {
+            Tab("Bugün", systemImage: "flame.fill", value: "today") { TodayView() }
+            Tab("Görevler", systemImage: "list.bullet", value: "tasks") { TasksView() }
             #if !os(macOS)
-            Tab("Ayarlar", systemImage: "gearshape") { NavigationStack { SettingsView() } }
+            Tab("Ayarlar", systemImage: "gearshape", value: "settings") { NavigationStack { SettingsView() } }
             #endif
         }
         .tint(Color(hex: Palette.colors[0]))
         #if os(macOS)
         .frame(minWidth: 520, minHeight: 560)
         #endif
+    }
+
+    /// DEBUG: ekran görüntüleri için `-tab tasks` gibi bir argümanla açılış sekmesi seçilebilir.
+    private static var initialTab: String {
+        #if DEBUG
+        let args = ProcessInfo.processInfo.arguments
+        if let i = args.firstIndex(of: "-tab"), i + 1 < args.count { return args[i + 1] }
+        #endif
+        return "today"
     }
 }
