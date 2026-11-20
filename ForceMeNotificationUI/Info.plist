@@ -30,6 +30,54 @@
 				<string>FORCE_DEADLINE</string>
 				<string>FORCE_INTERVAL</string>
 				<string>FORCE_PRAISE</string>
+				<string>FORCE_INTERVAL_5</string>
+				<string>FORCE_INTERVAL_10</string>
+				<string>FORCE_INTERVAL_15</string>
+				<string>FORCE_INTERVAL_20</string>
+				<string>FORCE_INTERVAL_25</string>
+				<string>FORCE_INTERVAL_30</string>
+				<string>FORCE_INTERVAL_35</string>
+				<string>FORCE_INTERVAL_40</string>
+				<string>FORCE_INTERVAL_45</string>
+				<string>FORCE_INTERVAL_50</string>
+				<string>FORCE_INTERVAL_55</string>
+				<string>FORCE_INTERVAL_60</string>
+				<string>FORCE_INTERVAL_65</string>
+				<string>FORCE_INTERVAL_70</string>
+				<string>FORCE_INTERVAL_75</string>
+				<string>FORCE_INTERVAL_80</string>
+				<string>FORCE_INTERVAL_85</string>
+				<string>FORCE_INTERVAL_90</string>
+				<string>FORCE_INTERVAL_95</string>
+				<string>FORCE_INTERVAL_100</string>
+				<string>FORCE_INTERVAL_105</string>
+				<string>FORCE_INTERVAL_110</string>
+				<string>FORCE_INTERVAL_115</string>
+				<string>FORCE_INTERVAL_120</string>
+				<string>FORCE_INTERVAL_125</string>
+				<string>FORCE_INTERVAL_130</string>
+				<string>FORCE_INTERVAL_135</string>
+				<string>FORCE_INTERVAL_140</string>
+				<string>FORCE_INTERVAL_145</string>
+				<string>FORCE_INTERVAL_150</string>
+				<string>FORCE_INTERVAL_155</string>
+				<string>FORCE_INTERVAL_160</string>
+				<string>FORCE_INTERVAL_165</string>
+				<string>FORCE_INTERVAL_170</string>
+				<string>FORCE_INTERVAL_175</string>
+				<string>FORCE_INTERVAL_180</string>
+				<string>FORCE_INTERVAL_185</string>
+				<string>FORCE_INTERVAL_190</string>
+				<string>FORCE_INTERVAL_195</string>
+				<string>FORCE_INTERVAL_200</string>
+				<string>FORCE_INTERVAL_205</string>
+				<string>FORCE_INTERVAL_210</string>
+				<string>FORCE_INTERVAL_215</string>
+				<string>FORCE_INTERVAL_220</string>
+				<string>FORCE_INTERVAL_225</string>
+				<string>FORCE_INTERVAL_230</string>
+				<string>FORCE_INTERVAL_235</string>
+				<string>FORCE_INTERVAL_240</string>
 			</array>
 			<key>UNNotificationExtensionDefaultContentHidden</key>
 			<true/>

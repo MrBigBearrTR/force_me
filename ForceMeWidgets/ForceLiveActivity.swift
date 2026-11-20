@@ -57,13 +57,11 @@ struct ForceLiveActivity: Widget {
                     .padding(.horizontal, 6)
                 }
             } compactLeading: {
-                // Adanın solunda, ikonun etrafında geriye doğru boşalan halka.
-                CountdownRing(context: context, size: 26, lineWidth: 3.5)
+                // Solda ikon ve etrafında geriye doğru boşalan halka.
+                CountdownRing(context: context, size: 26, lineWidth: 3)
             } compactTrailing: {
-                CountdownText(context: context)
-                    .font(.system(.callout, design: .rounded).weight(.bold))
-                    .foregroundStyle(tint)
-                    .frame(maxWidth: 48)
+                // Sağ taraf bilerek boş: süre metni yok, sadece halka.
+                EmptyView()
             } minimal: {
                 CountdownRing(context: context, size: 24, lineWidth: 3)
             }

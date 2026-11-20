@@ -13,8 +13,9 @@ settings:
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
     CODE_SIGN_STYLE: Automatic
-    # Kendi Apple Developer Team ID'ni buraya yaz (Xcode > Signing & Capabilities).
-    DEVELOPMENT_TEAM: ""
+    # Ücretli Apple Developer hesabı: "Ali Yalcin" (Individual). Personal Team (LSP748GM4X) değil.
+    # Burada sabit olduğu için proje `xcodegen generate` ile yeniden üretilse de ekip değişmez.
+    DEVELOPMENT_TEAM: KC2J97VT29
     ENABLE_PREVIEWS: YES
 
 targets:
@@ -117,6 +118,54 @@ targets:
               - FORCE_DEADLINE
               - FORCE_INTERVAL
               - FORCE_PRAISE
+              - FORCE_INTERVAL_5
+              - FORCE_INTERVAL_10
+              - FORCE_INTERVAL_15
+              - FORCE_INTERVAL_20
+              - FORCE_INTERVAL_25
+              - FORCE_INTERVAL_30
+              - FORCE_INTERVAL_35
+              - FORCE_INTERVAL_40
+              - FORCE_INTERVAL_45
+              - FORCE_INTERVAL_50
+              - FORCE_INTERVAL_55
+              - FORCE_INTERVAL_60
+              - FORCE_INTERVAL_65
+              - FORCE_INTERVAL_70
+              - FORCE_INTERVAL_75
+              - FORCE_INTERVAL_80
+              - FORCE_INTERVAL_85
+              - FORCE_INTERVAL_90
+              - FORCE_INTERVAL_95
+              - FORCE_INTERVAL_100
+              - FORCE_INTERVAL_105
+              - FORCE_INTERVAL_110
+              - FORCE_INTERVAL_115
+              - FORCE_INTERVAL_120
+              - FORCE_INTERVAL_125
+              - FORCE_INTERVAL_130
+              - FORCE_INTERVAL_135
+              - FORCE_INTERVAL_140
+              - FORCE_INTERVAL_145
+              - FORCE_INTERVAL_150
+              - FORCE_INTERVAL_155
+              - FORCE_INTERVAL_160
+              - FORCE_INTERVAL_165
+              - FORCE_INTERVAL_170
+              - FORCE_INTERVAL_175
+              - FORCE_INTERVAL_180
+              - FORCE_INTERVAL_185
+              - FORCE_INTERVAL_190
+              - FORCE_INTERVAL_195
+              - FORCE_INTERVAL_200
+              - FORCE_INTERVAL_205
+              - FORCE_INTERVAL_210
+              - FORCE_INTERVAL_215
+              - FORCE_INTERVAL_220
+              - FORCE_INTERVAL_225
+              - FORCE_INTERVAL_230
+              - FORCE_INTERVAL_235
+              - FORCE_INTERVAL_240
             UNNotificationExtensionInitialContentSizeRatio: 0.3
             UNNotificationExtensionDefaultContentHidden: true
 

@@ -223,4 +223,18 @@ final class RepeatingTaskTests: XCTestCase {
                                              completedAt: date(2026, 11, $0, 11, 10), doneCount: 13) }
         XCTAssertFalse(engine.effectiveWindow(t).learned)
     }
+
+    func testPostponeOptions() {
+        XCTAssertEqual(engine.postponeOptions(walk()), [5, 8]) // 25 dk → 1/5 ve 1/3
+        XCTAssertEqual(ScheduleEngine.postponeOptions(repeatEvery: 15), [3, 5])
+        XCTAssertEqual(ScheduleEngine.postponeOptions(repeatEvery: 5), [1, 2])
+        XCTAssertEqual(engine.postponeOptions(TaskSnapshot()), [5, 15])
+    }
+
+    func testPostponeKeepsSlotCounts() {
+        let today = date(2026, 11, 20)
+        var entry = partial(today, done: 3, missed: 1)
+        entry.postponedUntil = date(2026, 11, 20, 10, 30)
+        XCTAssertEqual(engine.status(walk(logs: [entry]), on: today), .inProgress(done: 3, missed: 1))
+    }
 }

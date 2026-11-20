@@ -55,7 +55,7 @@ struct RepeatingTaskRow: View {
                     .font(.footnote)
                     .buttonStyle(.borderless)
             } else {
-                HStack(spacing: 10) {
+                HStack(spacing: 8) {
                     Button { store.slotDone(snap.id) } label: {
                         ActionLabel(title: "Yaptım", systemImage: "plus")
                     }
@@ -67,15 +67,23 @@ struct RepeatingTaskRow: View {
                     }
                     .buttonStyle(.bordered)
 
-                    Spacer(minLength: 8)
-
-                    Button(role: .destructive) { store.stopToday(snap.id) } label: {
-                        Text("Bugün yeter")
-                            .font(.footnote)
-                            .lineLimit(1)
-                            .fixedSize(horizontal: true, vertical: false)
+                    // Erteleme seçenekleri (aralığın 1/5'i ve 1/3'ü) + "Bugün yeter" tek menüde: satır taşmasın.
+                    Menu {
+                        ForEach(engine.postponeOptions(snap), id: \.self) { minutes in
+                            Button("\(minutes) dk ertele", systemImage: "timer") {
+                                store.postpone(snap.id, minutes: minutes)
+                            }
+                        }
+                        Divider()
+                        Button("Bugün daha fazla hatırlatma", systemImage: "bell.slash", role: .destructive) {
+                            store.stopToday(snap.id)
+                        }
+                    } label: {
+                        ActionLabel(title: "Ertele", systemImage: "timer")
                     }
-                    .buttonStyle(.borderless)
+                    .buttonStyle(.bordered)
+
+                    Spacer(minLength: 0)
                 }
             }
         }
@@ -87,6 +95,13 @@ struct RepeatingTaskRow: View {
         if case .stopped = status {
             Text("Bugün daha fazla hatırlatmıyorum.")
                 .font(.caption).foregroundStyle(.orange)
+        } else if let until = engine.log(snap, on: now)?.postponedUntil, until > now {
+            HStack(spacing: 4) {
+                Image(systemName: "hourglass")
+                Text("Ertelendi · son ") + Text(timerInterval: now...until, countsDown: true)
+            }
+            .font(.caption.monospacedDigit().weight(.semibold))
+            .foregroundStyle(.orange)
         } else if let next = engine.nextSlot(snap, after: now) {
             Text("Sıradaki tur \(next.formatted(date: .omitted, time: .shortened))")
                 .font(.caption).foregroundStyle(.secondary)

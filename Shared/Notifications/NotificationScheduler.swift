@@ -3,17 +3,29 @@ import UserNotifications
 
 enum NotificationAction {
     static let done = "FORCE_DONE"
-    static let postpone15 = "FORCE_POSTPONE_15"
-    static let postpone30 = "FORCE_POSTPONE_30"
+    /// Erteleme: "FORCE_POSTPONE_<dakika>"
+    static let postponePrefix = "FORCE_POSTPONE_"
     static let skip = "FORCE_SKIP"
     static let slotMissed = "FORCE_SLOT_MISSED"
     static let stopToday = "FORCE_STOP_TODAY"
+
+    static func postpone(_ minutes: Int) -> String { postponePrefix + String(minutes) }
+
+    static func postponeMinutes(from identifier: String) -> Int? {
+        guard identifier.hasPrefix(postponePrefix) else { return nil }
+        return Int(identifier.dropFirst(postponePrefix.count))
+    }
 }
 
 enum NotificationCategory {
     static let reminder = "FORCE_REMINDER"
     static let deadline = "FORCE_DEADLINE"
+    /// Eski sürümden kalan bildirimler için.
     static let interval = "FORCE_INTERVAL"
+
+    /// Aralıklı görevler: erteleme butonları aralığa göre değiştiği için her aralığın kendi kategorisi var.
+    /// Liste, bildirim kartı uzantısının Info.plist'inde de (project.yml) aynen bulunmalı.
+    static func interval(every minutes: Int) -> String { "FORCE_INTERVAL_\(minutes)" }
     /// Tebrikler: aksiyon yok, sadece açılınca kompakt kart gösterilsin diye.
     static let praise = "FORCE_PRAISE"
 }
@@ -56,10 +68,11 @@ final class NotificationScheduler {
         #endif
         let done = UNNotificationAction(identifier: NotificationAction.done, title: "Yaptım ✅", options: [],
                                         icon: UNNotificationActionIcon(systemImageName: "checkmark.circle.fill"))
-        let p15 = UNNotificationAction(identifier: NotificationAction.postpone15, title: "15 dk ertele", options: postponeOptions,
-                                       icon: UNNotificationActionIcon(systemImageName: "timer"))
-        let p30 = UNNotificationAction(identifier: NotificationAction.postpone30, title: "30 dk ertele", options: postponeOptions,
-                                       icon: UNNotificationActionIcon(systemImageName: "timer"))
+        func postpone(_ minutes: Int) -> UNNotificationAction {
+            UNNotificationAction(identifier: NotificationAction.postpone(minutes), title: "\(minutes) dk ertele",
+                                 options: postponeOptions, icon: UNNotificationActionIcon(systemImageName: "timer"))
+        }
+        let singlePostpones = ScheduleEngine.singlePostponeOptions.map(postpone)
         let skip = UNNotificationAction(identifier: NotificationAction.skip, title: "Bugün yapamam", options: [.destructive],
                                         icon: UNNotificationActionIcon(systemImageName: "xmark.circle"))
         // Aralıklı görev turları: uygulamayı açmadan arka planda işlenir.
@@ -67,12 +80,18 @@ final class NotificationScheduler {
                                           icon: UNNotificationActionIcon(systemImageName: "xmark"))
         let stop = UNNotificationAction(identifier: NotificationAction.stopToday, title: "Bugün daha fazla hatırlatma",
                                         options: [.destructive], icon: UNNotificationActionIcon(systemImageName: "bell.slash"))
-        center.setNotificationCategories([
-            UNNotificationCategory(identifier: NotificationCategory.reminder, actions: [done, p15, p30, skip], intentIdentifiers: []),
-            UNNotificationCategory(identifier: NotificationCategory.deadline, actions: [done, p15, skip], intentIdentifiers: []),
+        var categories: Set<UNNotificationCategory> = [
+            UNNotificationCategory(identifier: NotificationCategory.reminder, actions: [done] + singlePostpones + [skip], intentIdentifiers: []),
+            UNNotificationCategory(identifier: NotificationCategory.deadline, actions: [done] + singlePostpones + [skip], intentIdentifiers: []),
             UNNotificationCategory(identifier: NotificationCategory.interval, actions: [done, missed, stop], intentIdentifiers: []),
             UNNotificationCategory(identifier: NotificationCategory.praise, actions: [], intentIdentifiers: []),
-        ])
+        ]
+        for every in ScheduleEngine.repeatChoices {
+            let snoozes = ScheduleEngine.postponeOptions(repeatEvery: every).map(postpone)
+            categories.insert(UNNotificationCategory(identifier: NotificationCategory.interval(every: every),
+                                                     actions: [done] + snoozes + [missed, stop], intentIdentifiers: []))
+        }
+        center.setNotificationCategories(categories)
     }
 
     @discardableResult
@@ -111,7 +130,8 @@ final class NotificationScheduler {
                         let id = "reminder.\(task.id.uuidString).\(engine.dayKey(day)).\(i)"
                         slotRequests.append((fire, {
                             let text = Messages.slotReminder(task, multiplier: m, done: done, required: required, total: slots.count)
-                            let content = self.makeContent(text, task: task, category: NotificationCategory.interval,
+                            let content = self.makeContent(text, task: task,
+                                                           category: NotificationCategory.interval(every: task.repeatEveryMinutes),
                                                            ring: m > 1 ? .penalty : .none, multiplier: m, kind: .interval,
                                                            progress: (done, required, slots.count))
                             return self.request(id, content, fire)
@@ -165,16 +185,20 @@ final class NotificationScheduler {
 
     func scheduleDeadline(for task: TaskSnapshot, at deadline: Date, multiplier m: Int) {
         cancelDeadline(for: task.id, clearDelivered: false)
+        // Aralıklı görevin ertelenen turu kendi butonlarıyla (Yaptım / ertele / Yapamadım …) gelir.
+        let category = task.isRepeating ? NotificationCategory.interval(every: task.repeatEveryMinutes)
+                                        : NotificationCategory.deadline
         // Son bildirim süre bittiğinde gelir: kartta geri sayım değil "Süre doldu" yazsın.
         let end = makeContent(Messages.deadline(task, multiplier: m), task: task,
-                              category: NotificationCategory.deadline, ring: .postponed, multiplier: m,
+                              category: category, ring: .postponed, multiplier: m,
                               kind: .deadline, deadline: nil)
         center.add(request("deadline.\(task.id.uuidString)", end, deadline))
 
+        // Kısa ertelemelerde (5-8 dk) "son 1 dakika" uyarısı gereksiz gürültü olur.
         let warnAt = deadline.addingTimeInterval(-60)
-        if warnAt.timeIntervalSinceNow > 30 {
+        if deadline.timeIntervalSinceNow >= 9 * 60 {
             let warn = makeContent(Messages.lastMinute(task, multiplier: m), task: task,
-                                   category: NotificationCategory.deadline, ring: .postponed, multiplier: m,
+                                   category: category, ring: .postponed, multiplier: m,
                                    kind: .deadline, deadline: deadline)
             center.add(request("deadline.\(task.id.uuidString).warn", warn, warnAt))
         }

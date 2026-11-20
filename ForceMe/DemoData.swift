@@ -1,5 +1,6 @@
 #if DEBUG
 import Foundation
+import UserNotifications
 
 /// Sadece DEBUG: uygulamayı `-demo` argümanıyla açınca örnek görevler kurar.
 /// Xcode > Scheme > Run > Arguments'a `-demo` ekleyerek dene.
@@ -8,6 +9,9 @@ enum DemoData {
     static func seedIfRequested() {
         guard ProcessInfo.processInfo.arguments.contains("-demo") else { return }
         let store = ForceStore.shared
+        // Silinen eski demo görevlerinin bekleyen/teslim edilmiş bildirimleri kalmasın.
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         for task in store.allTasks() { store.context.delete(task) }
         store.save()
 
@@ -56,7 +60,8 @@ enum DemoData {
                            start: 20 * 60, end: 23 * 60, logs: [(-1, .done, at(-1, 21, 0))])
         store.save()
         _ = pushups
-        store.postpone(reading.id, minutes: 5)
+        // -demoQuick: Dynamic Island halkasının azalışını hızlı görmek için 1 dakikalık erteleme.
+        store.postpone(reading.id, minutes: ProcessInfo.processInfo.arguments.contains("-demoQuick") ? 1 : 5)
     }
 }
 #endif

@@ -22,6 +22,10 @@ struct ScheduleEngine {
     static let intervalSuccessRatio = 0.5
     /// Aralıklı görevde en kısa tekrar süresi.
     static let minRepeatMinutes = 5
+    /// Aralıklı görevde seçilebilen tekrar süreleri (5, 10, … 240 dk).
+    static let repeatChoices = Array(stride(from: 5, through: 240, by: 5))
+    /// Normal görevlerin erteleme seçenekleri (dk).
+    static let singlePostponeOptions = [5, 15]
 
     // MARK: - Gün hesapları
 
@@ -181,6 +185,19 @@ struct ScheduleEngine {
             return entry.doneCount >= requiredSlots(task, on: entry.day)
         }
         return entry.status == .done
+    }
+
+    /// Erteleme seçenekleri (dk). Normal görev: 5 ve 15.
+    /// Gün içinde tekrar eden görev: aralığın 1/5'i ve 1/3'ü (25 dk → 5 ve 8 dk).
+    func postponeOptions(_ task: TaskSnapshot) -> [Int] {
+        task.isRepeating ? Self.postponeOptions(repeatEvery: task.repeatEveryMinutes) : Self.singlePostponeOptions
+    }
+
+    static func postponeOptions(repeatEvery minutes: Int) -> [Int] {
+        let every = max(minRepeatMinutes, minutes)
+        let fifth = max(1, Int((Double(every) / 5).rounded()))
+        let third = max(fifth + 1, Int((Double(every) / 3).rounded()))
+        return [fifth, third]
     }
 
     /// Sıradaki tur saati (yoksa nil).

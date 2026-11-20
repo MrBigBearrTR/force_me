@@ -119,7 +119,7 @@ struct TodayRow: View {
                     .tint(.green)
 
                     Menu {
-                        ForEach([5, 15, 30, 60], id: \.self) { minutes in
+                        ForEach(engine.postponeOptions(snap), id: \.self) { minutes in
                             Button("\(minutes) dk ertele") { store.postpone(snap.id, minutes: minutes) }
                         }
                     } label: {

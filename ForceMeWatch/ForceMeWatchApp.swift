@@ -92,6 +92,13 @@ private struct WatchTaskDetail: View {
                         Label("Yaptım", systemImage: "plus")
                     }
                     .tint(.green)
+                    let snooze = engine.postponeOptions(snap)[0]
+                    Button {
+                        ForceStore.shared.postpone(snap.id, minutes: snooze)
+                        dismiss()
+                    } label: {
+                        Label("\(snooze) dk ertele", systemImage: "timer")
+                    }
                     Button {
                         ForceStore.shared.slotMissed(snap.id)
                         dismiss()
@@ -122,10 +129,10 @@ private struct WatchTaskDetail: View {
         }
         .tint(.green)
         Button {
-            ForceStore.shared.postpone(snap.id, minutes: 15)
+            ForceStore.shared.postpone(snap.id, minutes: 5)
             dismiss()
         } label: {
-            Label("15 dk ertele", systemImage: "timer")
+            Label("5 dk ertele", systemImage: "timer")
         }
         Button(role: .destructive) {
             ForceStore.shared.skip(snap.id)

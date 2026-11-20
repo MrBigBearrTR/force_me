@@ -74,9 +74,14 @@ final class ForceStore {
         let until = Date.now.addingTimeInterval(TimeInterval(minutes * 60))
         let m = engine.penaltyMultiplier(task.snapshot, on: .now)
         let log = makeTodayLog(for: task)
-        log.status = .postponed
+        if task.repeatEveryMinutes > 0 {
+            // Aralıklı görev: sadece bu tur ertelenir, günün sayımı (yapılan/yapılamayan) bozulmaz.
+            log.status = .partial
+        } else {
+            log.status = .postponed
+            log.completedAt = nil
+        }
         log.postponedUntil = until
-        log.completedAt = nil
         log.multiplier = m
         save()
         let snap = task.snapshot
@@ -107,6 +112,7 @@ final class ForceStore {
         let m = engine.penaltyMultiplier(snap, on: .now)
         let log = makeTodayLog(for: task)
         if log.status != .stopped { log.status = .partial }
+        log.postponedUntil = nil
         log.doneCount += 1
         log.completedAt = .now
         log.multiplier = m
@@ -129,6 +135,7 @@ final class ForceStore {
         guard let task = task(id) else { return }
         let log = makeTodayLog(for: task)
         if log.status != .stopped { log.status = .partial }
+        log.postponedUntil = nil
         log.missedCount += 1
         save()
         afterChange(id)
@@ -167,10 +174,12 @@ final class ForceStore {
     }
 
     func handle(actionIdentifier: String, taskID: UUID) {
+        if let minutes = NotificationAction.postponeMinutes(from: actionIdentifier) {
+            postpone(taskID, minutes: minutes)
+            return
+        }
         switch actionIdentifier {
         case NotificationAction.done: complete(taskID)
-        case NotificationAction.postpone15: postpone(taskID, minutes: 15)
-        case NotificationAction.postpone30: postpone(taskID, minutes: 30)
         case NotificationAction.skip: skip(taskID)
         case NotificationAction.slotMissed: slotMissed(taskID)
         case NotificationAction.stopToday: stopToday(taskID)

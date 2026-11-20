@@ -5,7 +5,7 @@ Zorlayıcı hatırlatma uygulaması: iPhone, iPad, Apple Watch ve Mac.
 - **Rastgele saat:** Görevi bir aralığa koyarsın (örn. 09:00–12:00), her gün o aralıkta farklı bir saatte hatırlatır.
 - **Alışkanlığı öğrenir:** Genelde 11:00–11:30 arasında yapıyorsan (en az 3 kayıt), hatırlatmalar o aralığa daralır.
 - **Ceza sistemi:** "Bugün yapamam" dersen ya da kaçırırsan, ertesi gün ikonun halkası kırmızı olur ve hedef katlanır (1 gün → x2, 2 gün → x3 …). Cezalıyken günde birden fazla (20 dk arayla) hatırlatma gelir.
-- **Ertele + geri sayım:** Ertelenen görev kilit ekranında ve Dynamic Island'da geri sayım olarak görünür ("20 sayfa için son 04:59"), halka geriye doğru boşalır.
+- **Ertele + geri sayım:** Normal görevler 5 veya 15 dk ertelenir. Gün içinde tekrar eden görevlerde erteleme süresi aralığın 1/5'i ve 1/3'üdür (25 dk → 5 / 8 dk); yalnızca o tur ertelenir, günün sayımı bozulmaz. Ertelenen görev kilit ekranında geri sayım olarak görünür; Dynamic Island'da ise ikonun etrafında boşalan bir halka olarak.
 - **Gün içi aralıklı tekrar:** Örneğin 08:00–18:00 arası 25 dk'da bir "1 dk yürüyüş". Her tur için bildirimde *Yaptım / Yapamadım / Bugün daha fazla hatırlatma* butonları vardır. Turların en az yarısı yapılırsa gün kurtarılmış sayılır; yapılmazsa ertesi gün ceza gelir (1 dk → 2 dk yürüyüş).
 - **Tekrar tipleri:** Tek sefer (yapılana kadar her gün peşini bırakmaz), her gün, haftalık (gün seçimli), aylık, N günde bir.
 - **İkonlu ve sesli bildirimler:** Bildirimde görev ikonu görünür, özel alarm sesi çalar; "Yaptım / 15 dk ertele / 30 dk ertele / Bugün yapamam" butonları vardır.
@@ -27,7 +27,7 @@ open ForceMe.xcodeproj
 
 ### Demo verisi (sadece Debug)
 
-Scheme > Run > Arguments'a `-demo` eklersen örnek görevler kurulur: alışkanlığı öğrenilmiş "Diş fırçala", dün kaçırıldığı için x2 cezalı "Şınav çek" 5 dakikalık geri sayımı başlamış "Kitap oku" ve 25 dk'da bir "Yürüyüş". `-skipAuth` bildirim izni sorusunu atlar.
+Scheme > Run > Arguments'a `-demo` eklersen örnek görevler kurulur: alışkanlığı öğrenilmiş "Diş fırçala", dün kaçırıldığı için x2 cezalı "Şınav çek" 5 dakikalık geri sayımı başlamış "Kitap oku" ve 25 dk'da bir "Yürüyüş". `-skipAuth` bildirim izni sorusunu atlar. `-demoQuick` ile erteleme 1 dakika olur; Dynamic Island halkasının azalışını hızlıca görmek için.
 
 ## Testler
 
@@ -53,7 +53,7 @@ Zamanlama motoru (`Shared/Core`) saf Swift'tir ve 22 birim testle doğrulanır: 
 
 ## Bilinen sınırlar
 
-- **Dynamic Island çevresinde halka:** Apple, uygulamaların adanın kenarına çizim yapmasına izin vermiyor; kompakt görünümde yalnızca kameranın solu ve sağı uygulamaya ait. Bu yüzden geri sayım solda ikonun etrafında geriye doğru boşalan bir halka, sağda da süre olarak gösteriliyor. Basılı tutunca açılan görünümde solda ikon, sağda büyük süre, altta görev adı ve boşalan bir çizgi var.
+- **Dynamic Island:** Kompakt görünümde yalnızca solda görev ikonu ve etrafında geriye doğru boşalan halka var, sağ taraf boş. Adanın tamamını kaplayan bir geri sayım yapılamıyor: sistem adanın dış kenarındaki ~5,5 pt'lik bandı kırpıyor ve kameranın bulunduğu orta kısım sisteme ait. Basılı tutunca açılan görünümde solda ikon, sağda süre, altta görev adı var.
 - **Bildirimden erteleme:** Live Activity yalnızca uygulama ön plandayken başlatılabildiği için, bildirimdeki "ertele" butonu uygulamayı bir anlığına açar.
 - **Senkron:** iCloud (CloudKit) imzalı bir build ve giriş yapılmış iCloud hesabı gerektirir. Bunlar yoksa veriler cihazda yerel olarak tutulur.
 - **Çift bildirim:** iPhone ve Mac'te aynı görevler varsa ikisi de bildirim gönderir. Ayarlar'dan birinde "Bu cihazda bildirim gönder" seçeneğini kapat. Watch, iPhone bildirimlerini aynalar.
