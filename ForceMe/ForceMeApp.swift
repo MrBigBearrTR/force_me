@@ -22,6 +22,9 @@ struct ForceMeApp: App {
                 .task {
                     #if DEBUG
                     DemoData.seedIfRequested()
+                    #if os(macOS)
+                    MacSnapshot.runIfRequested()
+                    #endif
                     if !ProcessInfo.processInfo.arguments.contains("-skipAuth") {
                         await NotificationScheduler.shared.requestAuthorization()
                     }

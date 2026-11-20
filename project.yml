@@ -204,7 +204,8 @@ targets:
     type: application
     platform: macOS
     sources:
-      - ForceMe
+      - path: ForceMe
+        excludes: [Info.plist, ForceMe.entitlements]
       - path: Shared
         excludes: [LiveActivity]
       - Resources

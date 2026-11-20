@@ -65,3 +65,32 @@ enum DemoData {
     }
 }
 #endif
+
+#if DEBUG && os(macOS)
+import AppKit
+
+/// Sadece DEBUG/Mac: `-snapshot <dosya.png>` ile açılınca ana pencereyi 2x PNG olarak kaydedip çıkar
+/// (App Store ekran görüntüleri için; ekran kaydı izni gerektirmez).
+@MainActor
+enum MacSnapshot {
+    static func runIfRequested() {
+        let args = ProcessInfo.processInfo.arguments
+        guard let i = args.firstIndex(of: "-snapshot"), i + 1 < args.count else { return }
+        let path = args[i + 1]
+        NSApp.appearance = NSAppearance(named: .aqua)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            guard let window = NSApp.windows.first(where: { $0.isVisible && $0.contentView != nil && $0.frame.width > 400 }),
+                  let frameView = window.contentView?.superview else { exit(1) }
+            window.setContentSize(NSSize(width: 1440, height: 900))
+            window.center()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                let bounds = frameView.bounds
+                guard let rep = frameView.bitmapImageRepForCachingDisplay(in: bounds) else { exit(1) }
+                frameView.cacheDisplay(in: bounds, to: rep)
+                try? rep.representation(using: .png, properties: [:])?.write(to: URL(fileURLWithPath: path))
+                exit(0)
+            }
+        }
+    }
+}
+#endif

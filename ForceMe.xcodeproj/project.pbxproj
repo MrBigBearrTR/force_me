@@ -66,7 +66,6 @@
 		AFB6129348874D47E101155E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD96CE73D50D39DF03F15B3 /* UserNotifications.framework */; };
 		B61F649BAE67698CA024C257 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AA1FD3F1A1F9016A5AA256 /* PrivacyInfo.xcprivacy */; };
 		B7FE89B152107145D1F416AD /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804057413CAE7E9C96D3C64 /* DemoData.swift */; };
-		BA3D1042CCDD48807C181A29 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D0941D6E31B74633B06E7F /* Info.plist */; };
 		BAB85DCD8C06C068175A5E24 /* TaskIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EE6267976EBF00ACA4983 /* TaskIconView.swift */; };
 		BF1D9B74D7CFDAB2356E9EFA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B597CAA14EAD19E29B9585 /* Models.swift */; };
 		C2B201FDB5B3766DB8435B8D /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F203D563B7AF4BD17FC524 /* TodayView.swift */; };
@@ -574,7 +573,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				835B8FDA31EB0E3FE5DE5BA5 /* Assets.xcassets in Resources */,
-				BA3D1042CCDD48807C181A29 /* Info.plist in Resources */,
 				B61F649BAE67698CA024C257 /* PrivacyInfo.xcprivacy in Resources */,
 				E4E4B66F622238AAE3787F2F /* force_alarm.wav in Resources */,
 				9B0F9DB633B6BDB925377A51 /* force_praise.wav in Resources */,
